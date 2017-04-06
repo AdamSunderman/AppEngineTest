@@ -18,7 +18,7 @@ from time import gmtime, strftime
 class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write(strftime('%a, %d %b %Y %H:%M:%S +0000', gmtime()))
+        self.response.write(strftime("%a, %d %b %Y %H:%M:%S %Z", gmtime()))
 
 
 app = webapp2.WSGIApplication([
