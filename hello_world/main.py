@@ -13,12 +13,12 @@
 # limitations under the License.
 
 import webapp2
-import datetime 
+import time 
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write(datetime.datetime.now().time())
+        self.response.write(time.strftime('%l:%M%p %z on %b %d, %Y'))
 
 
 app = webapp2.WSGIApplication([
