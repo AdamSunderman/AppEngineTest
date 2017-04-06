@@ -18,7 +18,7 @@ import time
 class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write(time.strftime("(%I)- 12:(%M)-60:(%S)-60"))
+        self.response.write(time.strftime("%I:%M:%S"))
 
 
 app = webapp2.WSGIApplication([
